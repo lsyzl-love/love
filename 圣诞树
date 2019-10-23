@@ -1,0 +1,46 @@
+#include<stdio.h>
+int main()
+{
+    int i,j,k,n;
+    char ch;
+    scanf("%d",&k);
+    while(k--)
+    {
+        
+        getchar();//吸收空格
+        scanf("%c",&ch);
+        n=ch-'A';//字符转换成数字，例如ch=B，n=1，由图可看出实际上只有4个循环；第一行的空格循环，第一行字符输出，只有一个所以不许循环；第二行的空格循环，和第二行字符循环。后面三四行只是前面的模仿。
+
+  A
+ AAA
+  B
+BBBBB
+
+
+        for(i=0;i<=n;i++)  //=的意义所在 使之为ch
+        {
+            for(j=0;j<=n;j++)
+            {
+            
+            printf(" ");
+             }
+             printf("%c\n",'A'+i);
+            
+             for(j=0;j<n-i;j++)
+             {
+            
+             printf(" ");
+            }
+            for(j=0;j<i*2+3;j++)
+            {
+            
+            printf("%c",'A'+i);
+        }
+        printf("\n");
+            
+        }
+    }
+    
+    
+    
+}
