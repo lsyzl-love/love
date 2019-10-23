@@ -1,0 +1,41 @@
+#include<stdio.h>
+int main ()
+{
+	int n,a,s;
+	while(scanf("%d",&n)!=EOF)
+		{
+		
+		for(a=2;a*a<n;a++)
+		{
+			s=0;
+			if(n%a==0)
+			{
+			while(n%a==0)
+			{
+			s+=1;
+			n/=a;
+			}
+			if(s>1)
+		
+			
+		printf("%d^%d",a,s);				
+			else	
+			printf("%d",a);
+			if(n!=1)
+					printf("*");
+					
+	 	}
+		}
+		if(n!=1)
+		{
+			printf("%d",n);	
+		}
+	printf ("\n");
+}
+	
+	return 0;
+	
+}
+	
+	
+	
